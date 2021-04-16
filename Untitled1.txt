@@ -1,0 +1,22 @@
+JScrollPane sp =  new JScrollPane(a1);
+	       sp.setBounds(5, 75, 440, 350);
+	       sp.setBorder(BorderFactory.createEmptyBorder());
+	      
+	       ScrollBarUI ui = new BasicScrollBarUI() {
+	       protected JButton createDecreaseButton(int orientation) {
+	    	   JButton button = super.createDecreaseButton(orientation);
+	    	   button.setBackground(new Color(7, 94, 84));
+	    	   button.setForeground(Color.WHITE);
+	    	   this.thumbColor = new Color(7, 94, 84);
+	    	   return button;
+	       	   }
+	       protected JButton createIncreaseButton(int orientation) {
+	    	   JButton button = super.createDecreaseButton(orientation);
+	    	   button.setBackground(new Color(7, 94, 84));
+	    	   this.thumbColor = new Color(7, 94, 84);
+	    	   button.setForeground(Color.WHITE);
+	    	   return button;
+	       	   }
+	       };
+	       sp.getVerticalScrollBar().setUI(ui);
+	       sp.add(a1);
